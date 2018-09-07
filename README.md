@@ -9,7 +9,6 @@ The dataset is of the following format, where each line corresponds to an n-dime
 1 7 8... 
 ...
 
- You need to provide a script with the following functionalities
 - ```sh compile.sh``` clones the following Github repo and compiles  code with respect to all implementations.
 - ```sh <rollno>.sh -kmeans <k>``` executes k-means algorithm with k as the numberof clusters and produces the cluster assignment of each data point
 - ```sh <rollno>.sh -dbscan -<minPts> <epsilon>``` executes DBSCAN and produces the list of cluster assignment of each data point
