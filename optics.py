@@ -1,5 +1,5 @@
 import numpy as np
-from dataset_generator import ClusteringData
+# from dataset_generator import ClusteringData
 import matplotlib.pyplot as plt
 from sys import argv
 from random import shuffle
@@ -241,32 +241,33 @@ class OPTICS(object):
 
 if __name__ == '__main__': 
 
-	# inputfile = argv[1]
+	inputfile = argv[1]
 	# labelfile = argv[2]
-	# outputfile = argv[3]
+	outputfile = argv[2]
 	# number_of_samples = argv[4]
 	# number_of_dimensions = argv[5]
 	# number_of_clusters = argv[6]
 	# cluster_type = argv[7]
+	epsilon = float(argv[3])
+	min_pts = int(argv[4])
 
-	inputfile = 'clustering_dataset.txt'
-	labelfile = 'clustering_labels.txt'
-	outputfile = 'out.txt'
-	number_of_samples = 1000
-	number_of_dimensions = 2
-	number_of_clusters = 3
-	cluster_std = 0.2
-	centers = [(-1, -1), (0, 0), (1, 1)]
-	cluster_type = 'blob'
-	epsilon = float(argv[2])
-	min_pts = int(argv[3])
+	# inputfile = 'clustering_dataset.txt'
+	# labelfile = 'clustering_labels.txt'
+	# outputfile = 'out.txt'
+	# number_of_samples = 1000
+	# number_of_dimensions = 2
+	# number_of_clusters = 3
+	# cluster_std = 0.2
+	# centers = [(-1, -1), (0, 0), (1, 1)]
+	# cluster_type = 'blob'
+	
 
-	if argv[1]=='y':
-		cluster_type = argv[4]
-		data = ClusteringData(centers, cluster_type, inputfile, labelfile, 
-						number_of_samples, number_of_dimensions,
-						number_of_clusters, cluster_std)
-		data.plot()
+	# if argv[1]=='y':
+	# 	cluster_type = argv[4]
+	# 	data = ClusteringData(centers, cluster_type, inputfile, labelfile, 
+	# 					number_of_samples, number_of_dimensions,
+	# 					number_of_clusters, cluster_std)
+	# 	data.plot()
 
 	optics = OPTICS(inputfile = inputfile, outputfile = outputfile, epsilon = epsilon, min_pts = min_pts)
 	optics.cluster()
