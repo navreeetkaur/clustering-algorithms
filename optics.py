@@ -226,7 +226,7 @@ if __name__ == '__main__':
 	inputfile = argv[3]
 
 	step0 = time.time()
-	optics = OPTICS(inputfile = inputfile, outputfile = outputfile, epsilon = epsilon, min_pts = min_pts)
+	optics = OPTICS(inputfile = inputfile, epsilon = epsilon, min_pts = min_pts)
 	optics.cluster()
 	# print(optics.reach_dist)
 	# print(optics.core_dist)
