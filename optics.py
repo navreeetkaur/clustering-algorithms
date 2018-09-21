@@ -211,17 +211,19 @@ class OPTICS(object):
 		reach_distances = [self.reach_dist[index] for index in self.ordered_points]
 		pos = np.arange(1,len(reach_distances)+1)
 		fig = plt.figure()
-		# plt.bar(pos, reach_distances, align='center', width=1.0)
-		plt.plot(pos, reach_distances)
+		plt.bar(pos, reach_distances, align='center', width=1.0)
+		# plt.plot(pos, reach_distances)
 		plt.title(f'Epsilon: {self.epsilon}, MinPts: {self.min_pts}')
+		plt.xlabel('Ordered Points')
+		plt.ylabel('Reachability Distances')
 		plt.show()
 						
 
 if __name__ == '__main__': 
 
-	inputfile = argv[1]
+	min_pts = int(argv[1])
 	epsilon = float(argv[2])
-	min_pts = int(argv[3])
+	inputfile = argv[3]
 
 	step0 = time.time()
 	optics = OPTICS(inputfile = inputfile, outputfile = outputfile, epsilon = epsilon, min_pts = min_pts)
