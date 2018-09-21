@@ -1,0 +1,2 @@
+1. 2015TT10917.sh : replaced == with =
+[ "$x" == "valid" ] does not work with bash in the given environment, [ "$x" = "valid" ] has to be used instead.
