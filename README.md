@@ -2,7 +2,7 @@
 
 ### K-means, DBSCAN, OPTICS
 
-This repository contains the implementation of k-means, DBSCAN and OPTICS from scratch as a part of [Homework-2](COL761_HW2.pdf) of the Data Mining Course(COL761) at IIT Delhi.
+This repository contains the implementation of k-means, DBSCAN and OPTICS from scratch as a part of [Homework-2](https://github.com/navreeetkaur/data-mining-assignments/raw/master/COL761_HW2.pdf) of the Data Mining Course(COL761) at IIT Delhi.
 
 The dataset is of the following format, where each line corresponds to an n-dimensional point. Each dimension is separated by a space. The number of dimensions and lines can be of any value till 5 and ~1-million points respectively. The feature values are floating point numbers.
 ```
